@@ -37,7 +37,7 @@ nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}nav a{text-decor
 .hero{position:relative;isolation:isolate;background:var(--bk);padding:0;min-height:clamp(560px,82vh,760px);display:flex;align-items:center}
 .hb2{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 30%;z-index:-2}
 .hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,11,13,.84) 0%,rgba(11,11,13,.6) 42%,rgba(11,11,13,.12) 100%),linear-gradient(0deg,rgba(184,10,104,.4),transparent 45%)}
-.hc{padding:72px 0}.hc h1{color:#fff;max-width:11ch}.hc p.l{color:#fff;max-width:520px}.hero .meta{color:#fff}.hero .meta a{color:#fff}.hero .b3{color:#fff}
+.hc{padding:72px 0}.hc h1{color:#fff;max-width:11ch}.hc p.l{color:#fff;max-width:520px}.hero .meta{color:#fff}.hero .meta a{color:#fff}.hero .b3{background:transparent;border-color:#fff;color:#fff}.hero .b3:hover{background:#fff;color:var(--bk)}
 @media(max-width:900px){.hb2{object-position:78% 30%}.hero::before{background:linear-gradient(180deg,rgba(11,11,13,.78) 0%,rgba(11,11,13,.6) 55%,rgba(184,10,104,.5) 100%)}.hc{padding:56px 0}.hc h1{max-width:none}}
 @media(min-width:901px){.hc h1{font-size:clamp(44px,4.8vw,58px);max-width:640px;text-wrap:balance}.hc p.l{max-width:580px;font-size:20px}}
 .hc{text-align:center}.hc .ctas,.hc .meta{justify-content:center}.hb2{object-position:60% 25%}
@@ -53,6 +53,7 @@ nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}nav a{text-decor
 .cres{background:var(--bk);color:#fff;border-radius:24px;padding:28px;display:grid;gap:14px;position:sticky;top:96px}.cres h3{color:#fff}.tot{font:800 44px/1 'Bricolage Grotesque',sans-serif;color:var(--pk)}.cn{font-size:14px;color:#d6d6de}
 @media(max-width:900px){.cal{grid-template-columns:1fr}.cres{position:static}}@media(max-width:600px){.cl2{padding:20px}.cr{flex-wrap:wrap}}
 @media(max-width:1100px){nav ul{gap:20px}}
+.pr .card{position:relative}.lk{color:inherit;text-decoration:none}.lk::after{content:"";position:absolute;inset:0;border-radius:24px}.lk:hover{text-decoration:underline}.lk:focus-visible{outline:3px solid var(--bk);outline-offset:4px}
 .tb{background:var(--bk);color:#fff}.tb ul{list-style:none;margin:0;padding:18px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-weight:700}
 .tb li{display:flex;gap:9px;align-items:center}.tb .i{color:var(--pk)}
 .ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}.ab img{border-radius:28px;aspect-ratio:3/4;object-fit:cover;object-position:top;width:100%;max-width:400px;box-shadow:0 20px 50px rgba(184,10,104,.2)}
@@ -91,7 +92,7 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 @media(max-width:900px){.hg,.ab,.ct{grid-template-columns:1fr}.g3,.pr,.fq{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.gal{columns:2}.ab img{margin-inline:auto}.sec{padding:56px 0}
 .mb{display:flex}nav{position:absolute;left:0;right:0;top:70px;background:#fff;border-bottom:1px solid var(--pm);display:none;padding:12px 20px 20px}nav.o{display:block}nav ul{flex-direction:column;gap:0}nav a{display:block;padding:14px 0;font-size:18px}.hb{display:none}}
 @media(max-width:600px){body{font-size:16px;padding-bottom:84px}.g3,.pr,.fq,.fg,form,.ab ul{grid-template-columns:1fr}.gal{columns:1}.btn{width:100%}.ctas{flex-direction:column}form{padding:22px}.tag{left:8px}.tb ul{flex-direction:column}
-.mc{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--pm);box-shadow:0 -8px 24px rgba(0,0,0,.08)}.mc .btn{min-height:54px;padding:0 6px;font-size:15px;width:auto}}
+.mc{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--pm);box-shadow:0 -8px 24px rgba(0,0,0,.08)}.mc .btn{min-height:54px;padding:0 6px;font-size:15px;width:auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -124,7 +125,7 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 <div class="w hc">
 <h1>Your Space Deserves to Sparkle.</h1>
 <p class="l">Professional residential and commercial cleaning services in Winnipeg. Reliable, detailed, and dedicated to making your space cleaner, healthier, and happier.</p>
-<div class="ctas"><a class="btn b1" href="#contact">Get a Free Quote</a><a class="btn b2" href="https://wa.me/12049518258" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp Us</a></div>
+<div class="ctas"><a class="btn b1" href="#contact">Get a Free Quote</a><a class="btn b3" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call 204-951-8258</a></div>
 <div class="meta"><span><span class="dot"></span>Open 24 Hours</span><a href="tel:+12049518258"><svg class="i" style="vertical-align:-5px;margin-right:6px"><use href="#ph"/></svg>204-951-8258</a></div>
 </div>
 <svg class="sp" style="width:40px;top:36px;right:8%;color:var(--pk)" aria-hidden="true"><use href="#star"/></svg><svg class="sp" style="width:22px;top:96px;right:calc(8% + 52px);color:#fff" aria-hidden="true"><use href="#star"/></svg>
@@ -159,17 +160,17 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 <div class="card"><div class="ic"><svg class="i"><use href="#hm"/></svg></div><h3>Residential &amp; Commercial</h3><p>From homes to offices and retail spaces, we help keep your environment fresh.</p></div>
 <div class="card"><div class="ic"><svg class="i"><use href="#cl"/></svg></div><h3>Convenient Scheduling</h3><p>We're open 24 hours to make booking your cleaning service convenient.</p></div>
 <div class="card"><div class="ic"><svg class="i"><use href="#hr"/></svg></div><h3>Customer-Focused Service</h3><p>We treat every space with care and respect.</p></div>
-<div class="card"><div class="ic"><svg class="i"><use href="#wa"/></svg></div><h3>Easy to Reach</h3><p>Call, WhatsApp, or send a quote request. Whatever is easiest for you.</p></div>
+<div class="card"><div class="ic"><svg class="i"><use href="#ph"/></svg></div><h3>Easy to Reach</h3><p>Call or send a quote request. Whatever is easiest for you.</p></div>
 </div></div></section>
 
 <section class="sec tint" id="pricing"><div class="w"><div class="hd"><h2>Extra Services</h2><p>Add these to any cleaning. Main cleaning packages are quoted to your space.</p></div>
 <div class="pr">
 <div class="card">Fridge Cleaning<b>$50–$80</b></div><div class="card">Oven Cleaning<b>$50–$80</b></div><div class="card">Wash Dishes<b>$20–$35</b></div><div class="card">Linen Changing<b>$15 each</b></div>
-<div class="card">Window Cleaning<b>$15 each</b></div><div class="card">Laundry<b>$30 per load</b></div><div class="card">Patio / Balcony Cleaning<b>Custom Price</b></div>
-<div class="card" style="background:var(--pk);border-color:var(--pk);color:#fff">First-time cleaning may have an extra charge.<b style="color:#fff;font-size:18px">Ask us for details</b></div></div>
+<div class="card">Window Cleaning<b>$15 each</b></div><div class="card">Laundry<b>$30 per load</b></div><div class="card">Patio / Balcony Cleaning<b><a class="lk" href="#contact">Custom Price</a></b></div>
+<div class="card" style="background:var(--pk);border-color:var(--pk);color:#fff">First-time cleaning may have an extra charge.<b style="color:#fff;font-size:18px"><a class="lk" href="mailto:Yennekacleaners@gmail.com?subject=First-time%20cleaning%20details">Ask us for details</a></b></div></div>
 <div class="cal" id="estimate"><div class="cl2"><h3>Estimate Your Extras</h3><p style="color:var(--mu);margin:6px 0 10px">Choose the extras you want to add to your cleaning and see an estimated total.</p><div id="cr"></div></div>
 <div class="cres" aria-live="polite"><h3>Estimated extras</h3><div class="tot" id="ct">$0</div><p id="cc" class="cn"></p><p class="cn">Main cleaning is quoted for your space and is not included. First-time cleaning may have an extra charge.</p>
-<a class="btn b2" id="cw" href="https://wa.me/12049518258" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Send Estimate on WhatsApp</a><a class="btn b1" href="#contact">Request My Quote</a></div></div>
+<a class="btn b1" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call 204-951-8258</a><a class="btn b3" href="#contact">Request My Quote</a></div></div>
 <p class="note">Need something else? Extra services are available upon request. Please notify us at least 48 hours in advance for cancellations.</p>
 <a class="btn b1" href="#contact">Request a Custom Quote</a></div></section>
 
@@ -185,9 +186,9 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 </div></div></section>
 
 <section class="cta"><div class="w"><h2>Ready for a Cleaner, Healthier Space?</h2><p>Let Yenneka Cleaning Services take care of the cleaning while you enjoy a fresh, comfortable space.</p>
-<div class="ctas"><a class="btn b1" href="#contact">Get a Free Quote</a><a class="btn b2" href="https://wa.me/12049518258" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp Us</a><a class="btn b3" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call 204-951-8258</a></div></div></section>
+<div class="ctas"><a class="btn b1" href="#contact">Get a Free Quote</a><a class="btn b3" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call 204-951-8258</a></div></div></section>
 
-<section class="sec" id="contact"><div class="w"><div class="hd"><h2>Request Your Free Quote</h2><p>Tell us about your space. Your request opens in WhatsApp so we can reply quickly.</p></div>
+<section class="sec" id="contact"><div class="w"><div class="hd"><h2>Request Your Free Quote</h2><p>Tell us about your space. Your request opens in your email app so we can reply quickly.</p></div>
 <div class="ct">
 <form id="qf">
 <label>Name<input name="Name" autocomplete="name" required></label>
@@ -205,11 +206,11 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 <p class="f" id="fs" role="status" style="font-size:15px;color:var(--mu)"></p>
 </form>
 <aside class="info"><h3>Yenneka Cleaning Services</h3>
-<div><svg class="i"><use href="#ph"/></svg><span><small>Phone / WhatsApp</small><a href="tel:+12049518258">204-951-8258</a></span></div>
+<div><svg class="i"><use href="#ph"/></svg><span><small>Phone</small><a href="tel:+12049518258">204-951-8258</a></span></div>
 <div><svg class="i"><use href="#ml"/></svg><span><small>Email</small><a href="mailto:Yennekacleaners@gmail.com">Yennekacleaners@gmail.com</a></span></div>
 <div><svg class="i"><use href="#mp"/></svg><span><small>Address</small>699 Manitoba Ave<br>Winnipeg, Manitoba</span></div>
 <div><svg class="i"><use href="#cl"/></svg><span><small>Hours</small>Open 24 Hours</span></div>
-<a class="btn b2" href="https://wa.me/12049518258" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp Us</a></aside>
+<a class="btn b1" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call 204-951-8258</a></aside>
 </div>
 <div class="map"><div><svg class="i"><use href="#mp"/></svg><span><h3>699 Manitoba Ave</h3>Winnipeg, Manitoba</span></div><a class="btn b1" href="https://www.google.com/maps/dir/?api=1&destination=699+Manitoba+Ave,+Winnipeg,+Manitoba" target="_blank" rel="noopener">Get Directions</a></div>
 </div></section>
@@ -222,7 +223,7 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 <details><summary>How often can I schedule cleaning?</summary><p>Weekly, bi-weekly, or monthly. One-time and deep cleaning are also available.</p></details>
 <details><summary>Do you offer add-on services?</summary><p>Yes. Add-ons include fridge, oven, window, and patio or balcony cleaning, dishes, linen changing, and laundry. See the Extra Services prices above. Other extras are available upon request.</p></details>
 <details><summary>Are you open 24 hours?</summary><p>Yes, Yenneka Cleaning Services is open 24 hours.</p></details>
-<details><summary>How do I request a quote?</summary><p>Fill out the quote form, tap WhatsApp Us, or call 204-951-8258.</p></details>
+<details><summary>How do I request a quote?</summary><p>Fill out the quote form or call 204-951-8258.</p></details>
 </div></section>
 </main>
 
@@ -233,7 +234,7 @@ footer .lg{width:150px;border-radius:14px;margin-bottom:12px}footer .tg{font:400
 <div><h3>Hours</h3><p>Open 24 Hours</p></div>
 </div><p class="cp">© 2026 Yenneka Cleaning Services. All rights reserved.</p></div></footer>
 
-<div class="mc"><a class="btn b3" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call</a><a class="btn b2" href="https://wa.me/12049518258" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp</a><a class="btn b1" href="#contact">Quote</a></div>
+<div class="mc"><a class="btn b1" href="tel:+12049518258"><svg class="i"><use href="#ph"/></svg>Call Now</a><a class="btn b3" href="#contact">Get a Quote</a></div>
 
 <script>
 var mb=document.getElementById('mb'),nav=document.getElementById('nav');
@@ -241,15 +242,14 @@ mb.onclick=function(){var o=nav.classList.toggle('o');mb.setAttribute('aria-expa
 nav.onclick=function(e){if(e.target.tagName=='A'){nav.classList.remove('o');mb.setAttribute('aria-expanded',false)}};
 document.getElementById('qf').onsubmit=function(e){e.preventDefault();var d=new FormData(e.target),t='New quote request - Yenneka Cleaning Services\n';
 d.forEach(function(v,k){if(v)t+=k+': '+v+'\n'});
-window.open('https://wa.me/12049518258?text='+encodeURIComponent(t),'_blank');
-document.getElementById('fs').textContent='Opening WhatsApp with your request. If it does not open, call 204-951-8258 or email Yennekacleaners@gmail.com.'};
+location.href='mailto:Yennekacleaners@gmail.com?subject='+encodeURIComponent('Quote request - Yenneka Cleaning Services')+'&body='+encodeURIComponent(t);
+document.getElementById('fs').textContent='Opening your email app with your request. If it does not open, call 204-951-8258 or email Yennekacleaners@gmail.com.'};
 var X=[['Fridge Cleaning',50,80,'$50–$80'],['Oven Cleaning',50,80,'$50–$80'],['Wash Dishes',20,35,'$20–$35'],['Linen Changing',15,15,'$15 each'],['Window Cleaning',15,15,'$15 each'],['Laundry',30,30,'$30 per load'],['Patio / Balcony Cleaning',0,0,'Custom Price',1]],Q=X.map(function(){return 0}),cr=document.getElementById('cr');
 X.forEach(function(x,i){var r=document.createElement('div');r.className='cr';r.innerHTML='<div><b>'+x[0]+'</b><span class="p">'+x[3]+'</span></div><div class="stp"><button type="button" aria-label="Remove one '+x[0]+'">\u2212</button><output id="q'+i+'" aria-label="'+x[0]+' quantity">0</output><button type="button" aria-label="Add one '+x[0]+'">+</button></div>';
 var b=r.querySelectorAll('button');b[0].onclick=function(){cu(i,-1)};b[1].onclick=function(){cu(i,1)};cr.appendChild(r)});
 function cu(i,d){Q[i]=Math.max(0,Math.min(X[i][4]?1:20,Q[i]+d));document.getElementById('q'+i).textContent=Q[i];cs()}
 function cs(){var lo=0,hi=0,t='',c=0;X.forEach(function(x,i){if(Q[i]){lo+=Q[i]*x[1];hi+=Q[i]*x[2];t+='\n- '+x[0]+(x[4]?'':' x'+Q[i]);c+=x[4]?1:0}});
 document.getElementById('ct').textContent=lo==hi?'$'+lo:'$'+lo+'\u2013$'+hi;document.getElementById('cc').textContent=c?'Plus a custom price for patio / balcony cleaning.':'';
-var m='Hi Yenneka Cleaning Services! I would like a cleaning quote.'+(t?'\nExtras I am interested in:'+t+'\nEstimated extras: '+document.getElementById('ct').textContent+(c?' + custom patio / balcony':''):'');
-document.getElementById('cw').href='https://wa.me/12049518258?text='+encodeURIComponent(m)}
+}
 cs();
 </script></body></html>
